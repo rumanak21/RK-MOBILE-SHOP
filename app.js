@@ -4,7 +4,7 @@ const searchMobile = () => {
     searchField.value = '';
 
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
-    // console.log(url);
+   
     fetch(url)
         .then(res => res.json())
         .then(data => displaySearchResult(data));
@@ -15,7 +15,11 @@ const displaySearchResult = allPhones => {
     const searchResult = document.getElementById('search-result');
     searchResult.innerText = ''
     const phones = allPhones.data.slice(0,20)
-
+if(phones == false){
+   
+    document.getElementById('error-msg').style.display= 'block';
+    
+}
     phones.forEach(phone => {
 
         const div = document.createElement('div');

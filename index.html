@@ -11,15 +11,17 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-light bg-gradient">
     <div class="container">
-        <h1 class="text-center m-5 text-info text-uppercase">RK Mobile Shop</h1>
+        <h1 class="text-center m-5 indigo-900 text-uppercase">RK Mobile Shop</h1>
         <div class="input-group mb-3 w-50 mx-auto">
             <input id="search-field" type="text" class="form-control" placeholder="Search the mobile phone"
                 aria-label="Search the mobile phone" aria-describedby="button-addon2">
             <button onclick="searchMobile()" id="btn-search" class="btn btn-outline-secondary"
                 type="button">Button</button>
         </div>
+        <!-- Error Message -->
+        <h2 id="error-msg" class="text-secondary text-center" style="display: none;"> No Found</h2>
         <!-- Single Phone details -->
 
         <div id="phone-details">
